@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Redirecting…</title>
+    <script>
+      (function(){
+        const params = new URLSearchParams(window.location.search);
+        const slug = params.get('case');
+        if (slug) {
+          window.location.replace(`/case/${encodeURIComponent(slug)}/`);
+        } else {
+          window.location.replace('/Work/');
+        }
+      })();
+    </script>
+    <meta http-equiv="refresh" content="0;url=/Work/">
+  </head>
+  <body>Redirecting… <a href="/Work/">Continue</a></body>
+</html>
