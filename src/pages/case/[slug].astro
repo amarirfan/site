@@ -1,0 +1,55 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.astro'
+import Footer from '../../components/Footer.astro'
+import cases from '../../data/cases.json'
+
+export async function getStaticPaths() {
+  return cases.order.map(slug => ({ params: { slug } }));
+}
+
+const { slug } = Astro.params;
+const data = cases[slug];
+---
+
+<Layout>
+  <Header />
+  <main style="min-height:100vh; background:var(--porcelain); color:var(--ink); font-family:'Instrument Sans', sans-serif;">
+    <section style="max-width:1100px; margin:0 auto; padding:clamp(90px,12vw,150px) 24px 0;">
+      <a href="/Work" style="color:var(--indigo); text-decoration:none;">← All work</a>
+      <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--graphite); margin-top:48px;">{data.meta}</div>
+      <h1 style="font-size:clamp(38px,7vw,60px); font-weight:500; margin:24px 0 0;">{data.title}</h1>
+      <p style="max-width:640px; font-size:19px; line-height:1.65; margin:36px 0 0;">{data.intro}</p>
+      <div style="height:clamp(280px,42vw,520px); background:#F1F1ED; border-radius:8px; display:flex; align-items:center; justify-content:center; margin-top:clamp(48px,7vw,80px);"> <span style="font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--graphite);">{data.shot}</span> </div>
+    </section>
+
+    <section style="max-width:1100px; margin:0 auto; padding:clamp(70px,10vw,120px) 24px 0;">
+      <div style="display:flex; flex-direction:column; gap:clamp(70px,10vw,110px);">
+        {data.sections.map(s => (
+          <div style="max-width:640px;">
+            <div style="font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--graphite); letter-spacing:0.04em; text-transform:uppercase;">{s.label}</div>
+            <h2 style="font-size:clamp(24px,4vw,30px); font-weight:500; margin:16px 0 0;">{s.heading}</h2>
+            {s.body.map(p => <p style="font-size:17px; line-height:1.7; margin:22px 0 0;">{p}</p>)}
+          </div>
+        ))}
+      </div>
+
+      <blockquote style="max-width:720px; margin:clamp(80px,11vw,130px) 0 0; padding:0; border-top:0.5px solid rgba(107,107,102,0.3); padding-top:56px; font-family:'Newsreader', serif; font-style:italic; font-size:clamp(24px,4vw,30px); line-height:1.45;">{data.quote}</blockquote>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(300px,100%),1fr)); gap:28px; margin-top:clamp(80px,11vw,130px);">
+        {data.images.map(img => (
+          <div style="height:240px; background:#F1F1ED; border-radius:8px; display:flex; align-items:center; justify-content:center;"><span style="font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--graphite);">{img}</span></div>
+        ))}
+      </div>
+
+      <div style="border-top:0.5px solid rgba(107,107,102,0.3); margin-top:clamp(90px,12vw,140px); padding:56px 0 clamp(90px,12vw,140px);">
+        <div style="font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--graphite); letter-spacing:0.04em; text-transform:uppercase;">Next case</div>
+        <a href="/Work" style="display:inline-block; font-size:clamp(26px,4.5vw,34px); font-weight:500; letter-spacing:-0.02em; line-height:1.25; color:var(--ink); text-decoration:none; margin-top:16px; max-width:700px;">Next →</a>
+        <div>
+          <a href="/index.html#say-hello" style="display:inline-block; margin-top:48px; background:var(--indigo); color:var(--porcelain); text-decoration:none; font-size:15px; font-weight:500; padding:13px 26px; border-radius:8px;">Work with me</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

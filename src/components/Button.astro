@@ -1,0 +1,13 @@
+---
+export interface Props {
+  href?: string;
+  variant?: 'primary' | 'outline';
+}
+const { href = '#', variant = 'primary' } = Astro.props as Props;
+---
+
+{variant === 'primary' ? (
+  <a class="btn btn-primary motion-pop" href={href}> <slot /> </a>
+) : (
+  <a class="btn btn-outline" href={href}> <slot /> </a>
+)}

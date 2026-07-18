@@ -1,0 +1,12 @@
+---
+export interface Props { name: string; price?: string; desc: string }
+const { name, price = '', desc } = Astro.props as Props;
+---
+
+<div style="border:0.5px solid rgba(107,107,102,0.3); border-radius:8px; padding:24px; display:flex; flex-direction:column; gap:10px; background:var(--porcelain);">
+  <div style="display:flex; align-items:baseline; gap:12px;">
+    <span style="font-size:16px; font-weight:500;">{name}</span>
+    <span style="font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--graphite);">{price}</span>
+  </div>
+  <p style="font-size:14px; color:var(--graphite); margin:0;">{desc}</p>
+</div>

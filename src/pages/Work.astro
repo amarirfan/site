@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import WorkCard from '../components/WorkCard.astro'
+
+---
+
+<Layout>
+  <Header />
+  <main style="min-height:100vh; background:var(--porcelain); color:var(--ink); font-family:'Instrument Sans', sans-serif;">
+    <section style="max-width:1100px; margin:0 auto; padding:clamp(80px,10vw,140px) 32px;">
+      <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--graphite);">Work · Selected case studies</div>
+      <h1 style="font-size:clamp(38px,7vw,60px); font-weight:500; margin:24px 0 0;">The work I can show</h1>
+      <p style="max-width:760px; font-size:17px; line-height:1.65; margin-top:20px;">A fair warning before you scroll: this is the visible fraction. A large part of my work lives behind agreements, in pharma, global finance, and enterprise AI, and it stays there. I wrote about why that is a feature, not an apology, in the journal. What you will find below is real, shipped, and described honestly, including where the numbers must stay internal.</p>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:28px; margin-top:48px;">
+        <WorkCard title="A billing flow two million people stopped noticing" subtitle="The complete billing experience and seven core pages, redesigned for one of the world's largest hosting platforms." meta="Product designer · 2020 to 2022 · Shipped" shot="SHOT: billing flow UI" />
+        <WorkCard title="Design for someone's worst day" subtitle="A shared design system across seven emergency response products, plus interaction design for Juvare AI." meta="Product designer · 2022 to 2026 · Shipped" shot="SHOT: system UI" />
+        <WorkCard title="Conversion design under regulation" subtitle="Regional website redesigns and Figma UI kits, shipped through medical, legal, and regulatory review." meta="Senior experience designer, via Cognizant · Shipped" shot="SHOT: regional site" />
+        <WorkCard title="A product, documented as a case study" subtitle="The conversion-ready template I sell, built in the open, decisions included." meta="In progress" shot="SHOT: template" />
+      </div>
+
+      <div style="margin-top:56px; border-top:0.5px solid rgba(107,107,102,0.3); padding-top:36px;">
+        <h2 style="font-size:20px; font-weight:500; margin:0 0 12px;">Currently invisible</h2>
+        <p style="max-width:760px; color:var(--graphite);">Right now I lead experience design for an enterprise GenAI platform and work with clients in pharma and global finance. None of it can appear here yet. The patterns it teaches me show up in everything above, and in the journal.</p>
+      </div>
+
+    </section>
+  </main>
+  <Footer />
+</Layout>

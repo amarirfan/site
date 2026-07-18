@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+
+---
+
+<Layout>
+  <Header />
+  <main style="min-height:100vh; background:var(--porcelain); color:var(--ink); font-family:'Instrument Sans', sans-serif;">
+    <section style="max-width:720px; margin:0 auto; padding:clamp(80px,10vw,140px) 24px;">
+      <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--graphite);">Craft</div>
+      <h1 style="font-size:clamp(34px,6.5vw,48px); font-weight:500; margin:24px 0 0;">Making things with physical materials</h1>
+      <p style="margin-top:18px;">I make objects when the screen lets go: furniture, ceramics, and small tools. Craft keeps the hands honest and gives the brain new constraints to practice design with.</p>
+      <div style="margin-top:28px; display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:18px;">
+        <div style="height:200px; background:#F1F1ED; border-radius:8px; display:flex; align-items:center; justify-content:center;">PHOTO</div>
+        <div style="height:200px; background:#F1F1ED; border-radius:8px; display:flex; align-items:center; justify-content:center;">PHOTO</div>
+        <div style="height:200px; background:#F1F1ED; border-radius:8px; display:flex; align-items:center; justify-content:center;">PHOTO</div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

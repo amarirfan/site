@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+
+---
+
+<Layout>
+  <Header />
+  <main style="min-height:60vh; background:var(--porcelain); color:var(--ink); font-family:'Instrument Sans', sans-serif;">
+    <section style="max-width:900px; margin:0 auto; padding:clamp(80px,10vw,140px) 24px;">
+      <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--graphite);">Admin</div>
+      <h1 style="font-size:clamp(28px,5vw,40px); margin-top:18px;">Utility and maintenance</h1>
+      <p style="margin-top:18px;">This page is a placeholder for admin utilities and scripts. Keep legacy exported pages in <code>public/</code> for comparison while migrating features into components and client scripts.</p>
+    </section>
+  </main>
+  <Footer />
+</Layout>

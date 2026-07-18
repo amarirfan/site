@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+
+---
+
+<Layout>
+  <Header />
+  <main style="min-height:100vh; background:var(--porcelain); color:var(--ink); font-family:'Instrument Sans', sans-serif;">
+    <section style="max-width:640px; margin:0 auto; padding:clamp(80px,10vw,140px) 24px;">
+      <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--graphite);">About · Vilnius, Lithuania</div>
+      <h1 style="font-size:clamp(34px,6.5vw,48px); font-weight:500; margin:24px 0 0;">The long way here</h1>
+      <div style="margin-top:24px;">
+        <p>I did not study design. I studied international relations in Yogyakarta, and before that I ran my first business at school age: designing and producing custom schoolwear in Bengkulu, handling everything from the artwork to the shipping. I did not know the word yet, but that was the whole job I do now. Understand people, make the thing, stand behind it.</p>
+        <p style="margin-top:18px;">The route since then has not been straight. I designed multimedia for the Indonesian Embassy in Zagreb. I joined Hostinger as a graphic designer drawing illustrations for a global blog, then crossed into product design on hPanel, the control panel serving more than two million users. At Niagahoster I was the first interface designer on the team and helped build the design practice from zero. At Juvare I spent years on emergency response software, where the user might be coordinating the worst day of a city's life, and co-led a design system across seven products. Today I am a senior experience designer at Cognizant in Vilnius, leading design for an enterprise AI platform and working with clients in pharma and global finance.</p>
+        <p style="margin-top:18px;">Somewhere along that route, Indonesia became the place I am from and Lithuania became the place I live. My family and I made the Baltics home. The distance between those two points, cultural, linguistic, professional, is probably the most useful design education I ever received. You learn to never assume the user thinks like you when you have spent a decade being the foreigner in the room.</p>
+        <p style="margin-top:18px;">What I believe about the work is simple. Constraints are not the enemy of good design, they are the proof of it. Anyone can make a beautiful screen with no rules. The craft shows when medical review, legacy systems, regulation, or a two million user habit is pushing back.</p>
+        <p style="margin-top:18px;">Outside the work: I run long distances, slowly and stubbornly. I follow Formula 1 for the same reason I love design systems, it is precision under pressure. And I make things with my hands whenever the screen lets go of me. More on that below.</p>
+      </div>
+      <blockquote style="font-family:'Newsreader', serif; font-style:italic; margin-top:28px;">You learn to never assume the user thinks like you when you have spent a decade being the foreigner in the room.</blockquote>
+      <div style="margin-top:24px;"><a href="/Work" style="display:inline-block; background:var(--indigo); color:var(--porcelain); padding:13px 26px; border-radius:8px; text-decoration:none;">See the work</a> <a href="/index.html#say-hello" style="display:inline-block; margin-left:12px; color:var(--indigo);">Say hello</a></div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

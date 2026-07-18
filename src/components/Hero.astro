@@ -1,0 +1,40 @@
+---
+import Button from './Button.astro'
+---
+
+<section class="hero" style="max-width:1100px; margin:0 auto; padding:clamp(96px,15vw,180px) 32px clamp(110px,17vw,200px);">
+  <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--graphite); letter-spacing:0.02em;">Senior experience designer · Vilnius</div>
+  <h1 id="hero-title" class="motion-fade-up" style="font-size:clamp(42px,8.5vw,76px); font-weight:500; letter-spacing:-0.025em; line-height:1.08; margin:28px 0 0; max-width:700px;">Designed to convert.<br/>Crafted to <span style="position:relative; display:inline-block;">last.</span></h1>
+  <p id="hero-lead" class="motion-fade-up" style="max-width:480px; font-size:18px; line-height:1.65; color:var(--ink); margin:44px 0 0; transition-delay:120ms;">I'm Ammar, a senior experience designer working in the most demanding corners of the web: enterprise AI, pharma, and global finance. I make interfaces that move numbers, and things that don't need to.</p>
+  <div style="display:flex; gap:14px; margin-top:44px;" id="hero-ctas">
+    <Button href="#say-hello" variant="primary">Work with me</Button>
+    <Button href="/Work/" variant="outline">See the work</Button>
+  </div>
+</section>
+
+<script>
+  // Simple entry animation when hero enters the viewport
+  (function(){
+    function reveal(){
+      document.getElementById('hero-title').style.opacity = '1';
+      document.getElementById('hero-title').style.transform = 'none';
+      document.getElementById('hero-lead').style.opacity = '1';
+      document.getElementById('hero-lead').style.transform = 'none';
+      document.getElementById('hero-ctas').style.opacity = '1';
+      document.getElementById('hero-ctas').style.transform = 'none';
+    }
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      // Respect user preference
+      document.getElementById('hero-title').classList.add('is-visible');
+      document.getElementById('hero-lead').classList.add('is-visible');
+      document.getElementById('hero-ctas').classList.add('is-visible');
+      return;
+    }
+    if (typeof IntersectionObserver !== 'undefined'){
+      const obs = new IntersectionObserver(entries => { if(entries[0].isIntersecting){ reveal(); obs.disconnect(); } }, {threshold:0.1});
+      obs.observe(document.querySelector('.hero'));
+    } else {
+      reveal();
+    }
+  })();
+</script>

@@ -1,0 +1,137 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <main class="min-h-screen bg-[#060608] text-white">
+    <header class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
+      <a href="/" class="flex items-center gap-3 text-lg font-semibold tracking-tight">
+        <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white text-base font-semibold text-[#060608]">C</span>
+        <span>Claude</span>
+      </a>
+      <nav class="hidden items-center gap-8 text-sm text-zinc-300 md:flex">
+        <a href="#" class="transition hover:text-white">Product</a>
+        <a href="#plans" class="transition hover:text-white">Pricing</a>
+        <a href="#faq" class="transition hover:text-white">FAQ</a>
+        <a href="#" class="transition hover:text-white">Resources</a>
+      </nav>
+      <a href="#" class="rounded-full border border-zinc-700 px-4 py-2 text-sm text-zinc-100 transition hover:border-white hover:text-white">
+        Try Claude
+      </a>
+    </header>
+
+    <section class="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:py-24">
+      <div class="max-w-3xl">
+        <p class="mb-5 text-sm uppercase tracking-[0.32em] text-zinc-500">Question what’snext</p>
+        <h1 class="text-5xl font-semibold leading-[0.95] tracking-[-0.03em] sm:text-6xl lg:text-7xl">
+          Your thinking partner for big ambitions
+        </h1>
+        <p class="mt-8 max-w-2xl text-lg leading-8 text-zinc-300">
+          Meet Claude, a next-generation AI assistant for writing, coding, research, and everyday work. Move from idea to output with thoughtful support that stays grounded in your context.
+        </p>
+        <div class="mt-10 flex flex-wrap gap-4">
+          <a href="#" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-[#060608] transition hover:bg-zinc-200">
+            Continue with Google
+          </a>
+          <a href="#" class="inline-flex items-center justify-center rounded-full border border-zinc-700 px-6 py-3 text-sm font-medium text-zinc-100 transition hover:border-zinc-400 hover:text-white">
+            Continue with email
+          </a>
+        </div>
+        <p class="mt-6 text-sm leading-6 text-zinc-500">
+          By continuing, you acknowledge Anthropic’s Privacy Policy.
+        </p>
+      </div>
+
+      <div class="rounded-[2rem] border border-zinc-800 bg-zinc-950/80 p-8 shadow-[0_0_0_1px_rgba(255,255,255,0.02)] backdrop-blur">
+        <div class="space-y-4">
+          <div class="rounded-2xl border border-zinc-800 bg-zinc-900/80 p-6">
+            <div class="flex items-center justify-between">
+              <p class="text-sm uppercase tracking-[0.24em] text-zinc-500">Free</p>
+              <p class="text-3xl font-semibold">$0</p>
+            </div>
+            <p class="mt-4 text-sm leading-6 text-zinc-400">Free for everyone</p>
+          </div>
+          <div class="rounded-2xl border border-zinc-800 bg-zinc-900/80 p-6">
+            <div class="flex items-center justify-between">
+              <p class="text-sm uppercase tracking-[0.24em] text-zinc-500">Pro</p>
+              <p class="text-3xl font-semibold">$17</p>
+            </div>
+            <p class="mt-4 text-sm leading-6 text-zinc-400">For everyday productivity</p>
+          </div>
+          <div class="rounded-2xl border border-zinc-800 bg-zinc-900/80 p-6">
+            <div class="flex items-center justify-between">
+              <p class="text-sm uppercase tracking-[0.24em] text-zinc-500">Max</p>
+              <p class="text-3xl font-semibold">$100</p>
+            </div>
+            <p class="mt-4 text-sm leading-6 text-zinc-400">More usage and priority access</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="plans" class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+      <div class="mb-10 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <p class="text-sm uppercase tracking-[0.32em] text-zinc-500">Explore plans</p>
+          <h2 class="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">From free to enterprise</h2>
+        </div>
+        <a href="#" class="text-sm font-medium text-zinc-300 transition hover:text-white">See all plans</a>
+      </div>
+
+      <div class="grid gap-6 lg:grid-cols-3">
+        <article class="rounded-[1.6rem] border border-zinc-800 bg-zinc-950/70 p-8">
+          <p class="text-sm uppercase tracking-[0.24em] text-zinc-500">Free</p>
+          <h3 class="mt-4 text-2xl font-semibold">Try Claude</h3>
+          <p class="mt-4 text-sm leading-7 text-zinc-400">Chat on web, iOS, Android, and desktop. Generate code and visualizations, and bring your own context to the conversation.</p>
+        </article>
+        <article class="rounded-[1.6rem] border border-zinc-800 bg-zinc-950/70 p-8">
+          <p class="text-sm uppercase tracking-[0.24em] text-zinc-500">Pro</p>
+          <h3 class="mt-4 text-2xl font-semibold">More usage, more leverage</h3>
+          <p class="mt-4 text-sm leading-7 text-zinc-400">Includes Claude Code, advanced projects, research, and access to more Claude models for everyday productivity.</p>
+        </article>
+        <article class="rounded-[1.6rem] border border-zinc-800 bg-zinc-950/70 p-8">
+          <p class="text-sm uppercase tracking-[0.24em] text-zinc-500">Max</p>
+          <h3 class="mt-4 text-2xl font-semibold">High-capacity workflow</h3>
+          <p class="mt-4 text-sm leading-7 text-zinc-400">Choose higher usage limits, priority access, and early access to advanced features for your biggest workflows.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="faq" class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+      <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">Frequently asked questions</h2>
+      <div class="mt-8 divide-y divide-zinc-800 rounded-[1.6rem] border border-zinc-800 bg-zinc-950/70">
+        <details class="group p-6">
+          <summary class="flex cursor-pointer list-none items-center justify-between text-left text-lg font-medium text-zinc-100">
+            What is Claude and how does it work?
+            <span class="text-2xl text-zinc-500 transition group-open:rotate-45">+</span>
+          </summary>
+          <p class="mt-4 max-w-3xl text-sm leading-7 text-zinc-400">Claude is an AI assistant that can help with writing, coding, research, and analysis while keeping context across projects and conversations.</p>
+        </details>
+        <details class="group p-6">
+          <summary class="flex cursor-pointer list-none items-center justify-between text-left text-lg font-medium text-zinc-100">
+            What should I use Claude for?
+            <span class="text-2xl text-zinc-500 transition group-open:rotate-45">+</span>
+          </summary>
+          <p class="mt-4 max-w-3xl text-sm leading-7 text-zinc-400">Use Claude to draft copy, review code, synthesize research, and make progress on complex thinking tasks with less friction.</p>
+        </details>
+        <details class="group p-6">
+          <summary class="flex cursor-pointer list-none items-center justify-between text-left text-lg font-medium text-zinc-100">
+            How much does it cost to use?
+            <span class="text-2xl text-zinc-500 transition group-open:rotate-45">+</span>
+          </summary>
+          <p class="mt-4 max-w-3xl text-sm leading-7 text-zinc-400">Claude offers a free tier, a Pro plan, and higher-capacity Max plans for teams and advanced workflows.</p>
+        </details>
+      </div>
+    </section>
+
+    <footer class="mx-auto flex max-w-7xl flex-col gap-4 border-t border-zinc-800 px-6 py-10 text-sm text-zinc-500 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+      <p>© 2026 Anthropic</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#" class="transition hover:text-white">Privacy</a>
+        <a href="#" class="transition hover:text-white">Terms</a>
+        <a href="#" class="transition hover:text-white">Support</a>
+        <a href="#" class="transition hover:text-white">Download</a>
+      </div>
+    </footer>
+  </main>
+</Layout>
