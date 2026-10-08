@@ -1,16 +1,17 @@
 ---
+import { url } from '../lib/utils'
 const links = [
-  { href: '/Work/', label: 'work' },
-  { href: '/Services/', label: 'services' },
-  { href: '/Journal/', label: 'journal' },
-  { href: '/About/', label: 'about' },
-  { href: '/Craft/', label: 'craft' }
+  { href: url('/Work/'), label: 'work' },
+  { href: url('/Services/'), label: 'services' },
+  { href: url('/Journal/'), label: 'journal' },
+  { href: url('/About/'), label: 'about' },
+  { href: url('/Craft/'), label: 'craft' }
 ];
 ---
 
 <header style="position: sticky; top: 0; z-index:60; background: var(--bg-transparent); border-bottom: 0.5px solid var(--border); transition: background 300ms ease, border-color 300ms ease;">
   <nav style="max-width:1100px; margin:0 auto; padding:18px 32px; display:flex; align-items:center; justify-content:space-between;">
-    <a href="/index.html" style="display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink);">
+    <a href={url('/')} style="display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink);">
       <span style="display:flex; align-items:center; justify-content:center; width:22px; height:22px; background:#C7361F; border-radius:4px; font-family: 'Newsreader', serif; font-style:italic; font-size:15px; color: #FAFAF8; line-height:1;">a</span>
       <span style="font-weight:500; font-size:17px; letter-spacing:-0.02em;">ammar</span>
     </a>

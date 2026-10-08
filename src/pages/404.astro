@@ -1,4 +1,5 @@
 ---
+import { url } from '../lib/utils'
 import Layout from '../layouts/Layout.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
@@ -10,7 +11,7 @@ import Footer from '../components/Footer.astro'
   <main style="min-height:80vh; display:flex; align-items:center; justify-content:center; background:var(--porcelain); color:var(--ink);">
     <section style="text-align:center;">
       <h1 style="font-size:clamp(48px,10vw,80px); margin:0; font-family:'Newsreader', serif;">404</h1>
-      <p style="margin-top:18px; font-size:18px;">Page not found. <a href="/" style="color:var(--indigo);">Return home</a></p>
+      <p style="margin-top:18px; font-size:18px;">Page not found. <a href={url('/')} style="color:var(--indigo);">Return home</a></p>
     </section>
   </main>
   <Footer />

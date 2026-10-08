@@ -1,4 +1,5 @@
 ---
+import { url } from '../lib/utils'
 import Button from './Button.astro'
 ---
 
@@ -8,7 +9,7 @@ import Button from './Button.astro'
   <p id="hero-lead" class="motion-fade-up" style="max-width:480px; font-size:18px; line-height:1.65; color:var(--ink); margin:44px 0 0; transition-delay:120ms;">I'm Ammar, a senior experience designer working in the most demanding corners of the web: enterprise AI, pharma, and global finance. I make interfaces that move numbers, and things that don't need to.</p>
   <div style="display:flex; gap:14px; margin-top:44px;" id="hero-ctas">
     <Button href="#say-hello" variant="primary">Work with me</Button>
-    <Button href="/Work/" variant="outline">See the work</Button>
+    <Button href={url('/Work/')} variant="outline">See the work</Button>
   </div>
 </section>
 

@@ -1,4 +1,5 @@
 ---
+import { url } from '../../lib/utils'
 import Layout from '../../layouts/Layout.astro'
 import Header from '../../components/Header.astro'
 import Footer from '../../components/Footer.astro'
@@ -16,7 +17,7 @@ const data = cases[slug];
   <Header />
   <main style="min-height:100vh; background:var(--porcelain); color:var(--ink); font-family:'Instrument Sans', sans-serif;">
     <section style="max-width:1100px; margin:0 auto; padding:clamp(90px,12vw,150px) 24px 0;">
-      <a href="/Work" style="color:var(--indigo); text-decoration:none;">← All work</a>
+      <a href={url('/Work')} style="color:var(--indigo); text-decoration:none;">← All work</a>
       <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--graphite); margin-top:48px;">{data.meta}</div>
       <h1 style="font-size:clamp(38px,7vw,60px); font-weight:500; margin:24px 0 0;">{data.title}</h1>
       <p style="max-width:640px; font-size:19px; line-height:1.65; margin:36px 0 0;">{data.intro}</p>
@@ -44,9 +45,9 @@ const data = cases[slug];
 
       <div style="border-top:0.5px solid rgba(107,107,102,0.3); margin-top:clamp(90px,12vw,140px); padding:56px 0 clamp(90px,12vw,140px);">
         <div style="font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--graphite); letter-spacing:0.04em; text-transform:uppercase;">Next case</div>
-        <a href="/Work" style="display:inline-block; font-size:clamp(26px,4.5vw,34px); font-weight:500; letter-spacing:-0.02em; line-height:1.25; color:var(--ink); text-decoration:none; margin-top:16px; max-width:700px;">Next →</a>
+        <a href={url('/Work')} style="display:inline-block; font-size:clamp(26px,4.5vw,34px); font-weight:500; letter-spacing:-0.02em; line-height:1.25; color:var(--ink); text-decoration:none; margin-top:16px; max-width:700px;">Next →</a>
         <div>
-          <a href="/index.html#say-hello" style="display:inline-block; margin-top:48px; background:var(--indigo); color:var(--porcelain); text-decoration:none; font-size:15px; font-weight:500; padding:13px 26px; border-radius:8px;">Work with me</a>
+          <a href={url('/#say-hello')} style="display:inline-block; margin-top:48px; background:var(--indigo); color:var(--porcelain); text-decoration:none; font-size:15px; font-weight:500; padding:13px 26px; border-radius:8px;">Work with me</a>
         </div>
       </div>
     </section>

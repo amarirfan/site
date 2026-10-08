@@ -1,4 +1,5 @@
 ---
+import { url } from '../lib/utils'
 import Layout from '../layouts/Layout.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
@@ -26,7 +27,7 @@ import Footer from '../components/Footer.astro'
         </div>
       </div>
 
-      <div style="margin-top:36px;"><a href="/index.html#say-hello" style="display:inline-block; background:var(--indigo); color:var(--porcelain); padding:13px 26px; border-radius:8px; text-decoration:none;">Work with me</a></div>
+      <div style="margin-top:36px;"><a href={url('/#say-hello')} style="display:inline-block; background:var(--indigo); color:var(--porcelain); padding:13px 26px; border-radius:8px; text-decoration:none;">Work with me</a></div>
     </section>
   </main>
   <Footer />

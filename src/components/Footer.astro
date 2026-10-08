@@ -1,4 +1,5 @@
 ---
+import { url } from '../lib/utils'
 ---
 
 <footer style="border-top:0.5px solid rgba(107,107,102,0.3);">
@@ -9,11 +10,11 @@
         <span style="font-weight:500; font-size:17px; letter-spacing:-0.02em;">ammar</span>
       </div>
       <div style="display:flex; gap:32px; font-size:14px;">
-        <a href="/Work.dc.html" style="color:var(--indigo); text-decoration:none; font-weight:500;">work</a>
-        <a href="/Services.dc.html" style="color:var(--indigo); text-decoration:none; font-weight:500;">services</a>
-        <a href="/Journal.dc.html" style="color:var(--indigo); text-decoration:none; font-weight:500;">journal</a>
-        <a href="/About.dc.html" style="color:var(--indigo); text-decoration:none; font-weight:500;">about</a>
-        <a href="/Craft.dc.html" style="color:var(--indigo); text-decoration:none; font-weight:500;">craft</a>
+        <a href={url('/Work/')} style="color:var(--indigo); text-decoration:none; font-weight:500;">work</a>
+        <a href={url('/Services/')} style="color:var(--indigo); text-decoration:none; font-weight:500;">services</a>
+        <a href={url('/Journal/')} style="color:var(--indigo); text-decoration:none; font-weight:500;">journal</a>
+        <a href={url('/About/')} style="color:var(--indigo); text-decoration:none; font-weight:500;">about</a>
+        <a href={url('/Craft/')} style="color:var(--indigo); text-decoration:none; font-weight:500;">craft</a>
       </div>
       <div style="font-size:14px; color:var(--graphite);">LinkedIn · Letsflow · email</div>
     </div>

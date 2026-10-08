@@ -1,6 +1,7 @@
 ---
+import { url } from '../lib/utils'
 export interface Props { title: string; subtitle: string; meta: string; shot?: string; href?: string }
-const { title, subtitle, meta, shot = 'SHOT', href = '/Work.dc.html' } = Astro.props as Props;
+const { title, subtitle, meta, shot = 'SHOT', href = url('/Work/') } = Astro.props as Props;
 ---
 
 <a href={href} style="display:block; text-decoration:none; color:var(--ink); border:0.5px solid rgba(107,107,102,0.3); border-radius:8px; background:var(--porcelain); overflow:hidden; transition:transform 300ms cubic-bezier(0.2,0.8,0.2,1), border-color 300ms;">

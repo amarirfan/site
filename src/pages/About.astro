@@ -1,4 +1,5 @@
 ---
+import { url } from '../lib/utils'
 import Layout from '../layouts/Layout.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
@@ -19,7 +20,7 @@ import Footer from '../components/Footer.astro'
         <p style="margin-top:18px;">Outside the work: I run long distances, slowly and stubbornly. I follow Formula 1 for the same reason I love design systems, it is precision under pressure. And I make things with my hands whenever the screen lets go of me. More on that below.</p>
       </div>
       <blockquote style="font-family:'Newsreader', serif; font-style:italic; margin-top:28px;">You learn to never assume the user thinks like you when you have spent a decade being the foreigner in the room.</blockquote>
-      <div style="margin-top:24px;"><a href="/Work" style="display:inline-block; background:var(--indigo); color:var(--porcelain); padding:13px 26px; border-radius:8px; text-decoration:none;">See the work</a> <a href="/index.html#say-hello" style="display:inline-block; margin-left:12px; color:var(--indigo);">Say hello</a></div>
+      <div style="margin-top:24px;"><a href={url('/Work')} style="display:inline-block; background:var(--indigo); color:var(--porcelain); padding:13px 26px; border-radius:8px; text-decoration:none;">See the work</a> <a href={url('/#say-hello')} style="display:inline-block; margin-left:12px; color:var(--indigo);">Say hello</a></div>
     </section>
   </main>
   <Footer />

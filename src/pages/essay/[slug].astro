@@ -1,4 +1,5 @@
 ---
+import { url } from '../../lib/utils'
 import Layout from '../../layouts/Layout.astro'
 import Header from '../../components/Header.astro'
 import Footer from '../../components/Footer.astro'
@@ -16,7 +17,7 @@ const post = essays[slug];
   <Header />
   <main style="min-height:100vh; background:var(--porcelain); color:var(--ink); font-family:'Newsreader', serif;">
     <section style="max-width:640px; margin:0 auto; padding:clamp(90px,12vw,150px) 24px;">
-      <a href="/Journal" style="color:var(--indigo); text-decoration:none;">← Journal</a>
+      <a href={url('/Journal')} style="color:var(--indigo); text-decoration:none;">← Journal</a>
       <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--graphite); margin-top:48px;">{post.date} · {post.readingTime}</div>
       <h1 style="font-style:italic; font-weight:500; font-size:clamp(34px,6.5vw,48px); margin:24px 0 0;">{post.title}</h1>
 
@@ -31,8 +32,8 @@ const post = essays[slug];
       </div>
 
       <div style="border-top:0.5px solid rgba(107,107,102,0.3); margin-top:70px; padding:48px 0 90px;">
-        <a href="/Journal" style="color:var(--indigo); text-decoration:none; font-size:16px; font-weight:500;">More from the journal →</a>
-        <div style="margin-top:24px;"><a href="/index.html#say-hello" style="display:inline-block; background:var(--indigo); color:var(--porcelain); padding:13px 26px; border-radius:8px; text-decoration:none;">Say hello</a></div>
+        <a href={url('/Journal')} style="color:var(--indigo); text-decoration:none; font-size:16px; font-weight:500;">More from the journal →</a>
+        <div style="margin-top:24px;"><a href={url('/#say-hello')} style="display:inline-block; background:var(--indigo); color:var(--porcelain); padding:13px 26px; border-radius:8px; text-decoration:none;">Say hello</a></div>
       </div>
     </section>
   </main>
